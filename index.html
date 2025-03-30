@@ -3,69 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поиск дешёвых скинов</title>
+    <title>Готовые бинды для CS:GO 2 и Warface</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        input {
-            padding: 10px;
-            width: 300px;
-        }
-        button {
-            padding: 10px;
-            cursor: pointer;
-        }
-        .results {
-            margin-top: 20px;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .bind-container { max-width: 600px; margin: auto; text-align: left; }
+        .bind { background: #f4f4f4; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        button { padding: 8px 12px; margin-left: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h1>Поиск дешёвых скинов</h1>
-    <input type="text" id="skinName" placeholder="Введите название скина">
-    <button onclick="searchSkin()">Найти</button>
-    <div class="results" id="results"></div>
-
-    <script>
-        const API_KEY = "dbsIXESwg723fQ0HxDn7c68hxajK5Oo"; // Вставьте свой API-ключ
+    <h1>Готовые бинды для CS:GO 2 и Warface</h1>
+    <p>Выберите нужный бинд и скопируйте его одним кликом!</p>
+    
+    <div class="bind-container">
+        <div class="bind">
+            <strong>Бинд на прыжок + колесо</strong>
+            <p><code>bind "MWHEELUP" "+jump"; bind "MWHEELDOWN" "+jump"</code></p>
+            <button onclick="copyBind('bind \"MWHEELUP\" \"+jump\"; bind \"MWHEELDOWN\" \"+jump\"')">Скопировать</button>
+        </div>
         
-        async function searchSkin() {
-            let skinName = document.getElementById("skinName").value;
-            let resultsDiv = document.getElementById("results");
-            
-            if (!skinName) {
-                resultsDiv.innerHTML = "<p>Введите название скина!</p>";
-                return;
-            }
-            
-            resultsDiv.innerHTML = "<p>Ищем лучшие цены...</p>";
-            
-            let url = `https://market.csgo.com/api/v2/search-item-by-hash-name?key=${API_KEY}&hash_name=${encodeURIComponent(skinName)}`;
-            
-            try {
-                let response = await fetch(url);
-                let data = await response.json();
-                
-                if (data.data.length === 0) {
-                    resultsDiv.innerHTML = "<p>Скин не найден.</p>";
-                    return;
-                }
-                
-                let skin = data.data[0];
-                let price = (skin.price / 100).toFixed(2); // Цена в рублях
-                let link = `https://market.csgo.com/item/${skin.classid}-${skin.instanceid}`;
-                
-                resultsDiv.innerHTML = `
-                    <h3>${skinName}</h3>
-                    <p>Цена: ${price} ₽</p>
-                    <a href="${link}" target="_blank">Купить на Market CS:GO</a>
-                `;
-            } catch (error) {
-                resultsDiv.innerHTML = "<p>Ошибка при получении данных.</p>";
-            }
+        <div class="bind">
+            <strong>Бинд на прицел (вкл/выкл)</strong>
+            <p><code>bind "F1" "toggle cl_crosshairsize 2 5 10"</code></p>
+            <button onclick="copyBind('bind \"F1\" \"toggle cl_crosshairsize 2 5 10\"')">Скопировать</button>
+        </div>
+        
+        <div class="bind">
+            <strong>Быстрая закупка</strong>
+            <p><code>bind "F2" "buy ak47; buy m4a1; buy deagle; buy hegrenade"</code></p>
+            <button onclick="copyBind('bind \"F2\" \"buy ak47; buy m4a1; buy deagle; buy hegrenade\"')">Скопировать</button>
+        </div>
+    </div>
+    
+    <script>
+        function copyBind(bind) {
+            navigator.clipboard.writeText(bind).then(() => {
+                alert("Бинд скопирован!");
+            });
         }
     </script>
 </body>
