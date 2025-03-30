@@ -16,22 +16,59 @@
     <p>Выберите нужный бинд и скопируйте его одним кликом!</p>
     
     <div class="bind-container">
+        <h2>Движение и прыжки</h2>
         <div class="bind">
             <strong>Бинд на прыжок + колесо</strong>
             <p><code>bind "MWHEELUP" "+jump"; bind "MWHEELDOWN" "+jump"</code></p>
             <button onclick="copyBind('bind \"MWHEELUP\" \"+jump\"; bind \"MWHEELDOWN\" \"+jump\"')">Скопировать</button>
         </div>
-        
         <div class="bind">
-            <strong>Бинд на прицел (вкл/выкл)</strong>
-            <p><code>bind "F1" "toggle cl_crosshairsize 2 5 10"</code></p>
-            <button onclick="copyBind('bind \"F1\" \"toggle cl_crosshairsize 2 5 10\"')">Скопировать</button>
+            <strong>Бинд на быстрое приседание</strong>
+            <p><code>bind "CTRL" "+duck"</code></p>
+            <button onclick="copyBind('bind \"CTRL\" \"+duck\"')">Скопировать</button>
         </div>
         
+        <h2>Закупка</h2>
         <div class="bind">
             <strong>Быстрая закупка</strong>
             <p><code>bind "F2" "buy ak47; buy m4a1; buy deagle; buy hegrenade"</code></p>
             <button onclick="copyBind('bind \"F2\" \"buy ak47; buy m4a1; buy deagle; buy hegrenade\"')">Скопировать</button>
+        </div>
+        <div class="bind">
+            <strong>Закупка только пистолета</strong>
+            <p><code>bind "F3" "buy deagle"</code></p>
+            <button onclick="copyBind('bind \"F3\" \"buy deagle\"')">Скопировать</button>
+        </div>
+        
+        <h2>Прицел и графика</h2>
+        <div class="bind">
+            <strong>Бинд на смену прицела</strong>
+            <p><code>bind "F1" "toggle cl_crosshairsize 2 5 10"</code></p>
+            <button onclick="copyBind('bind \"F1\" \"toggle cl_crosshairsize 2 5 10\"')">Скопировать</button>
+        </div>
+        <div class="bind">
+            <strong>Изменение яркости</strong>
+            <p><code>bind "F4" "toggle mat_monitorgamma 1.6 2.2"</code></p>
+            <button onclick="copyBind('bind \"F4\" \"toggle mat_monitorgamma 1.6 2.2\"')">Скопировать</button>
+        </div>
+        
+        <h2>Гранаты</h2>
+        <div class="bind">
+            <strong>Авто-бросок гранаты</strong>
+            <p><code>bind "G" "+attack; -attack"</code></p>
+            <button onclick="copyBind('bind \"G\" \"+attack; -attack\"')">Скопировать</button>
+        </div>
+        
+        <h2>Прочие бинды</h2>
+        <div class="bind">
+            <strong>Быстрая смена рук</strong>
+            <p><code>bind "M" "toggle cl_righthand 0 1"</code></p>
+            <button onclick="copyBind('bind \"M\" \"toggle cl_righthand 0 1\"')">Скопировать</button>
+        </div>
+        <div class="bind">
+            <strong>Быстрое сбрасывание бомбы</strong>
+            <p><code>bind "V" "drop"</code></p>
+            <button onclick="copyBind('bind \"V\" \"drop\"')">Скопировать</button>
         </div>
     </div>
     
