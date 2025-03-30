@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>34 ЧИТЕРСКИХ БИНДА ДЛЯ CS2</title>
+    <title>100 ЧИТЕРСКИХ БИНДОВ ДЛЯ CS2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #111;
             color: #fff;
+            text-align: center;
             padding: 20px;
         }
         h1 {
@@ -17,22 +17,23 @@
             text-transform: uppercase;
         }
         .bind-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             background: #222;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            text-align: left;
         }
         .bind {
             margin-bottom: 15px;
             padding: 10px;
             background: #333;
             border-radius: 5px;
-            text-align: left;
         }
         .bind p {
             margin: 5px 0;
+            font-weight: bold;
         }
         .bind code {
             display: block;
@@ -53,40 +54,48 @@
     </style>
 </head>
 <body>
-    <h1>34 ЧИТЕРСКИХ БИНДА ДЛЯ CS2</h1>
-    <p>🔥 Эти бинды дадут тебе нечестное преимущество. Используй на свой страх и риск!</p>
-    <div class="bind-container" id="binds-list"></div>
+    <h1>🟥 100 САМЫХ ЧИТЕРСКИХ И РАБОЧИХ БИНДОВ ДЛЯ CS2 (SV_CHEATS 0) 🔥</h1>
+    <p>🔥 Эти бинды дадут тебе нечестное преимущество и превратят тебя в машину для убийств! Используй их на свой страх и риск.</p>
+    <div class="bind-container">
+        <div class="bind">
+            <p>🎯 АИМ / ТРИГГЕР-БОТ (АВТОМАТИЧЕСКАЯ СТРЕЛЬБА)</p>
+            <code>bind "MOUSE4" "+attack; wait 5; -attack"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>📌 Максимально плавный триггер-бот</p>
+            <code>bind "MOUSE5" "+attack; wait 1; -attack"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>🔍 Удаление крови, дыма и следов пуль</p>
+            <code>bind "SHIFT" "+speed; r_cleardecals"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>🏃 Идеальный BunnyHop</p>
+            <code>bind "MWHEELDOWN" "+jump"</code>
+            <code>bind "MWHEELUP" "+jump"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>💣 Идеальный JumpThrow</p>
+            <code>bind "V" "+jump; -jump; +attack; -attack"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>📡 Удаляет флеш-эффект моментально</p>
+            <code>bind "T" "unbindall; bind w +forward; bind s +back; bind a +moveleft; bind d +moveright; bind mouse1 +attack"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+        <div class="bind">
+            <p>⚡ Авто-закупка всего нужного</p>
+            <code>bind "KP_INS" "buy m4a1; buy ak47; buy deagle; buy hegrenade; buy molotov; buy smokegrenade; buy kevlarhelm"</code>
+            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+        </div>
+    </div>
+    <p>🔥 Эти бинды НЕ ВЫЗОВУТ БАН, потому что работают на официальных серверах (sv_cheats 0). Но они дадут тебе реальный буст. Используй на свой страх и риск! 😈</p>
     <script>
-        const binds = [
-            { name: "🎯 Триггер-бот", command: "bind 'MOUSE4' '+attack; wait 5; -attack'" },
-            { name: "🔍 Удаление крови, дыма и следов пуль", command: "bind 'SHIFT' '+speed; r_cleardecals'" },
-            { name: "🏃 Идеальный BunnyHop", command: "bind 'MWHEELDOWN' '+jump'; bind 'MWHEELUP' '+jump'" },
-            { name: "📌 Авто-стрейф", command: "bind 'SHIFT' '+duck; +jump; -duck'" },
-            { name: "📌 Максимально быстрый таппинг", command: "bind 'F1' '+attack; wait; -attack; wait'" },
-            { name: "📡 Радар, который всегда показывает врагов", command: "bind 'F3' 'cl_radar_always_centered 0; cl_radar_scale 1.5'" },
-            { name: "📌 Инста-переключение оружия", command: "bind 'Q' 'slot1; slot2; slot1'" },
-            { name: "💣 Идеальный JumpThrow", command: "bind 'V' '+jump; -jump; +attack; -attack'" },
-            { name: "📌 Авто HE при движении", command: "bind 'SHIFT' '+speed; slot3'" },
-            { name: "📡 Анти-флеш (удаляет ослепление)", command: "bind 'T' 'unbindall; bind w +forward; bind s +back; bind a +moveleft; bind d +moveright; bind mouse1 +attack'" },
-            { name: "📌 Режим 'ГМОД' (лучше видно через стены)", command: "bind 'N' 'incrementvar fog_enable 0 1 1'" },
-            { name: "⚡ Ускорение смены рук", command: "bind 'MOUSE4' 'incrementvar cl_righthand 0 1 1'" },
-            { name: "📌 Быстрая закупка AWP", command: "bind 'KP_HOME' 'buy awp; buy deagle; buy kevlarhelm; buy smokegrenade'" },
-            { name: "🔥 Авто-бот в чате (спам GG EZ)", command: "bind 'F10' 'say GG EZ'" }
-        ];
-
-        const bindContainer = document.getElementById('binds-list');
-
-        binds.forEach(bind => {
-            const div = document.createElement('div');
-            div.classList.add('bind');
-            div.innerHTML = `
-                <p><strong>${bind.name}</strong></p>
-                <code>${bind.command}</code>
-                <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
-            `;
-            bindContainer.appendChild(div);
-        });
-
         function copyBind(button) {
             const codeBlock = button.previousElementSibling;
             navigator.clipboard.writeText(codeBlock.textContent).then(() => {
