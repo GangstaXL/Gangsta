@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Поиск дешёвых скинов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <p>Это мой первый сайт на GitHub Pages 🚀</p>
+    <h1>Поиск дешёвых скинов</h1>
+    <input type="text" id="skinName" placeholder="Введите название скина">
+    <button onclick="searchSkin()">Найти</button>
+    <div class="results" id="results"></div>
+
+    <script>
+        const API_KEY = "ВАШ_API_КЛЮЧ"; // Вставьте свой API-ключ
+        
+        async function searchSkin() {
+            let skinName = document.getElementById("skinName").value;
+            let resultsDiv = document.getElementById("results");
+            
+            if (!skinName) {
+                resultsDiv.innerHTML = "<p>Введите название скина!</p>";
+                return;
+            }
+            
+            resultsDiv.innerHTML = "<p>Ищем лучшие цены...</p>";
+            
+            let url = `https://market.csgo.com/api/v2/search-item-by-hash-name?key=${API_KEY}&hash_name=${encodeURIComponent(skinName)}`;
+            
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
+                
+                if (data.data.length === 0) {
+                    resultsDiv.innerHTML = "<p>Скин не найден.</p>";
+                    return;
+                }
+                
+                let skin = data.data[0];
+                let price = (skin.price / 100).toFixed(2); // Цена в рублях
+                let link = `https://market.csgo.com/item/${skin.classid}-${skin.instanceid}`;
+                
+                resultsDiv.innerHTML = `
+                    <h3>${skinName}</h3>
+                    <p>Цена: ${price} ₽</p>
+                    <a href="${link}" target="_blank">Купить на Market CS:GO</a>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = "<p>Ошибка при получении данных.</p>";
+            }
+        }
+    </script>
 </body>
 </html>
