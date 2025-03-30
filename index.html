@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 ЧИТЕРСКИХ БИНДОВ ДЛЯ CS2</title>
+    <title>34 ЧИТЕРСКИХ БИНДА ДЛЯ CS2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,27 +53,40 @@
     </style>
 </head>
 <body>
-    <h1>100 ЧИТЕРСКИХ БИНДОВ ДЛЯ CS2</h1>
+    <h1>34 ЧИТЕРСКИХ БИНДА ДЛЯ CS2</h1>
     <p>🔥 Эти бинды дадут тебе нечестное преимущество. Используй на свой страх и риск!</p>
-    <div class="bind-container">
-        <div class="bind">
-            <p><strong>🎯 Триггер-бот (выстрел при наведении на врага)</strong></p>
-            <code>bind "MOUSE4" "+attack; wait 5; -attack"</code>
-            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
-        </div>
-        <div class="bind">
-            <p><strong>🔍 Удаление крови, дыма и следов пуль</strong></p>
-            <code>bind "SHIFT" "+speed; r_cleardecals"</code>
-            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
-        </div>
-        <div class="bind">
-            <p><strong>🏃 Идеальный BunnyHop</strong></p>
-            <code>bind "MWHEELDOWN" "+jump"</code>
-            <code>bind "MWHEELUP" "+jump"</code>
-            <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
-        </div>
-    </div>
+    <div class="bind-container" id="binds-list"></div>
     <script>
+        const binds = [
+            { name: "🎯 Триггер-бот", command: "bind 'MOUSE4' '+attack; wait 5; -attack'" },
+            { name: "🔍 Удаление крови, дыма и следов пуль", command: "bind 'SHIFT' '+speed; r_cleardecals'" },
+            { name: "🏃 Идеальный BunnyHop", command: "bind 'MWHEELDOWN' '+jump'; bind 'MWHEELUP' '+jump'" },
+            { name: "📌 Авто-стрейф", command: "bind 'SHIFT' '+duck; +jump; -duck'" },
+            { name: "📌 Максимально быстрый таппинг", command: "bind 'F1' '+attack; wait; -attack; wait'" },
+            { name: "📡 Радар, который всегда показывает врагов", command: "bind 'F3' 'cl_radar_always_centered 0; cl_radar_scale 1.5'" },
+            { name: "📌 Инста-переключение оружия", command: "bind 'Q' 'slot1; slot2; slot1'" },
+            { name: "💣 Идеальный JumpThrow", command: "bind 'V' '+jump; -jump; +attack; -attack'" },
+            { name: "📌 Авто HE при движении", command: "bind 'SHIFT' '+speed; slot3'" },
+            { name: "📡 Анти-флеш (удаляет ослепление)", command: "bind 'T' 'unbindall; bind w +forward; bind s +back; bind a +moveleft; bind d +moveright; bind mouse1 +attack'" },
+            { name: "📌 Режим 'ГМОД' (лучше видно через стены)", command: "bind 'N' 'incrementvar fog_enable 0 1 1'" },
+            { name: "⚡ Ускорение смены рук", command: "bind 'MOUSE4' 'incrementvar cl_righthand 0 1 1'" },
+            { name: "📌 Быстрая закупка AWP", command: "bind 'KP_HOME' 'buy awp; buy deagle; buy kevlarhelm; buy smokegrenade'" },
+            { name: "🔥 Авто-бот в чате (спам GG EZ)", command: "bind 'F10' 'say GG EZ'" }
+        ];
+
+        const bindContainer = document.getElementById('binds-list');
+
+        binds.forEach(bind => {
+            const div = document.createElement('div');
+            div.classList.add('bind');
+            div.innerHTML = `
+                <p><strong>${bind.name}</strong></p>
+                <code>${bind.command}</code>
+                <button class="copy-btn" onclick="copyBind(this)">Копировать</button>
+            `;
+            bindContainer.appendChild(div);
+        });
+
         function copyBind(button) {
             const codeBlock = button.previousElementSibling;
             navigator.clipboard.writeText(codeBlock.textContent).then(() => {
