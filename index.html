@@ -51,7 +51,41 @@
             font-weight: bold;
             border-radius: 5px;
         }
-    </style>
+   <style>
+    .bind-container {
+        position: relative;
+    }
+    .copy-msg {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(10px, -50%);
+        background: rgba(0, 255, 0, 0.8);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+</style>
+
+<script>
+    function copyToClipboard(text, element) {
+        navigator.clipboard.writeText(text).then(() => {
+            const copyMsg = document.createElement("span");
+            copyMsg.className = "copy-msg";
+            copyMsg.innerText = "Скопировано!";
+            
+            element.appendChild(copyMsg);
+            copyMsg.style.display = "inline";
+            
+            setTimeout(() => {
+                copyMsg.remove();
+            }, 1500);
+        });
+    }
+</script>
 </head>
 <body>
 
