@@ -1,244 +1,90 @@
-пропиши мой код полностью только не забудь улучшить его, сделать так чтобы бинды копировались при нажатии на них и так далее пля сделай всё красивенько акуратненько чтобы на сайте это смотрелось супер , главное не упусти не одной детали самого кода незьзя уменьшать кол-во биндов в нём <!DOCTYPE html>
- <html lang="ru">
- <заголовок>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>34 чит-бинды для CS2</title>
- <style>
- body {
-font-family: Arial, sans-serif;
- background-color: #111;
- color: #fff;
- text-align: center;
- padding: 20px;
- } h1 {цвет: #ff0000;
- текст-заголовок: заглавными буквами;
- }
- .bind-container {
- максимальная ширина: 900 пикселей;
- поля: 20 пикселей по бокам;
- фон: #222; отступ: 15 пикселей;
- радиус границы: 10 пикселей;
- тень от рамки: 0 0 10 пикселей rgba (255, 0, 0, 0,5);
- выравнивание по тексту: по левому краю;
- }
- .привязать { нижнее поле: 15 пикселей;
- отступы: 10 пикселей;
- фон: #333;
- border-radius: 5 пикселей;
- }
- .привязать p {
- отступ: 5 пикселей 0;
- шрифт: полужирный;
- }
- .привязать код {
- отображение: блок;
- фон: #000;
- отступы: 5 пикселей;
- border-radius: 5 пикселей;
- цвет: #0f0;
- } .copy-btn {
- фон: #ff0000;
- граница: нет;
-  отступы: 8 пикселей 12 пикселей;
- курсор: указатель;
- цвет: #fff; шрифт: полужирный; border-radius: 5px; }
- </style>
- </head>
- <body>
- 
- <h1>34 чит-кода для CS2</h1>
- 
- <!-- Бинды начинаются здесь -->;
- 
- <div class="bind-container">
- <div class="bind-title">🎯 АИМ / ТРИГГЕР-БОТ (АВТОМАТИЧЕСКАЯ СТРЕЛЬБА)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать \"MOUSE4\" \"+атака; подождать 5; -атака\"')">привязать "MOUSE4" "+атака; подождать 5; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Автоматическая стрельба при приближении (AWP, Deagle)</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"MOUSE3\" \"+атака2; подождать 5; -атака; подождать 5; +атака; подождать 5; -атака\"')">привязать "MOUSE3" к "+атака2; подождать 5; -атака; подождать 5; +атака; подождать 5; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Максимально плавный триггер-бот</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать \"MOUSE5\" \"+атака; подождать 1; -атака\"')">привязать "MOUSE5" "+атака; подождать 1; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Режим «автоматического нажатия» (удобен для всех видов оружия)</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка "F" "+атака; -атака")">привязка "F" "+атака; -атака"</div>
- </div>
- 
- <класс div="привязка-контейнер">
- <div class="bind-title">📌 100% быстрый таппинг (Deagle, AK)</div>
- <div class="bind-code" onclick="copyToClipboard('привязать F1 "+атака; ожидание; -атака; ожидание')">привязать F1 "+атака; ожидание; -атака; ожидание"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">🔍 ВХ / УЛУЧШЕННАЯ ВИДИМОСТЬ</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"F2\" \"mat_monitorgamma 3; mat_colorcorrection 1; mat_autoexposure_max 5; r_drawparticles 0\"')">привязать "F2" "mat_monitorgamma 3; mat_colorcorrection 1; mat_autoexposure_max 5; r_drawparticles 0"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Радар, который всегда показывает врагов</div>
- <div class="bind-code" onclick="copyToClipboard('bind F3 "cl_radar_always_centered 0; cl_radar_scale 1,5")>bind F3 "cl_radar_always_centered 0; cl_radar_scale 1,55"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Удаление крови, дыма и следов пуль (при каждом движении)</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"SHIFT\" \"+скорость; r_cleardecals\"')">привязать "SHIFT" "+ скорость; r_cleardecals"</div>
- </div>
- 
- <класс div="bind-контейнер">
- <div class="bind-title">📌 Подсветка врагов (в зависимости от освещения)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать \"F4\" к \"incrementvar cl_csm_shadows 0 1 1\"')">привязать "F4" к "incrementvar cl_csm_shadows 0 1 1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">🏃 МАКСИМАЛЬНОЕ ДВИЖЕНИЕ (СКОРОСТЬ + СТРЕЙФЫ)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать "MWHEELDOWN" к "+прыжку"')">привязать "MWHEELDOWN" к "+прыжку"</div>
- </div>
- 
- <div class="привязать-контейнер">
- <div class="привязка-название">📌 Идеальный бхоп (всегда идеальные прыжки)</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка \"MWHEELUP\" \"+прыжок"')">привязка "MWHEELUP" "+прыжок"</div>
- </div>
- 
- <div class="контейнер-привязки">
- <div class="привязка-название">📌 Авто-стрейф (быстрое ускорение при движении)</div>
- <div class="bind-code" onclick="copyToClipboard('привязать "SHIFT" ""+утка; +прыжок; -утка")">привязать "SHIFT" ""+утка; + прыжок; -duck"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Переключение оружия после выстрела</div>
- <div class="bind-code" onclick="copyToClipboard('bind Q "slot1; slot2; slot1"')>bind Q "slot1; slot2; slot1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Максимальная скорость передвижения (читерский спринт)</div>
- <div class="bind-code" onclick="copyToClipboard('bind "ALT" "+вперед; +влево; +вправо")">bind "ALT" "+вперед; +влево; +вправо"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Выход за текстуры (работает в некоторых местах)</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"G\" \"cl_pitchup 89; cl_pitchdown -89\"')">bind "G" "cl_pitchup 89; cl_pitchdown -89"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">💣 ИДЕАЛЬНЫЕ ГРАНАТЫ</div>
- <div class="bind-code" onclick="copyToClipboard('привязка \"V\" \"+прыжок; -прыжок; +атака; -атака\"')">привязка "V" "+прыжок; -прыжок; +атака; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Молниеносная флешка за углом</div>
- <div class="bind-code" onclick="copyToClipboard('привязать "MOUSE5" "+прыжок; -прыжок; +атака; -атака")">привязка "MOUSE5" "+прыжок; -прыжок; +атака; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Тройной молот (огонь повсюду)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать \"H\" к \"слот3; +атака; подождать 5; -атака; слот1\"')">привязать "H" к "слот3; +атака; подождать 5; -атака; слот1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Автоматическое срабатывание при движении (молниеносный бросок)</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка "SHIFT" "+скорость; слот 3")">привязка "SHIFT" "+скорость; слот 3"</div>
- </div>
- 
- <класс div="привязка-контейнер">
- <div class="bind-title">📌 Автоматическая флешка через 5 секунд</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"X\" \"slot3; wait 100; +атака; wait 10; -атака\"')">bind "X" "slot3; wait 100; +атака; wait 10; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">🛡 АНТИОТДАЧА / КОНТРОЛЬ СТРЕЛЬБЫ</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка \"F5\" \"cl_wpn_sway_scale 0; cl_wpn_sway_intertia 0\"')">привязка "F5" "cl_wpn_sway_scale 0; cl_wpn_sway_intertia 0"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Минимальная отдача</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать "F6" "viewmodel_presetpos 2"')>привязать "F6" "viewmodel_presetpos 2"</div>
- </div>
- 
- <класс div="привязать-контейнер>
- <div class="bind-title">📌 Устраняет тряску при выстрелах</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"F7\" \"cl_bobcycle 0; cl_bob 0; cl_bobamt_lat 0; cl_bobamt_vert 0\"')">bind "F7" "cl_bobcycle 0; cl_bob 0; cl_bobamt_lat 0; cl_bobamt_vert 0"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Полностью убирает движение оружия</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать "C" " "+атака; подождите 3; -атака; подождите 3; +атака; подождите 3; -атака"')>привязать "C" ""+атака; подождите 3; -атака; подождите 3; +атака; подождите 3; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Максимально точный разброс для пистолетов</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать "Z" " +атака; подождать 2; -атака; подождать 2; +атака; подождать 2; -атака\"')">привязать "Z" "+атака; подождать 2; -атака; подождать 2; +атака; подождать 2; -атака"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📡 АНТИ-ФЛЕШ / ЧИТ НА РАДАР</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"T\" \"отменить привязку; привязать w + вперед; привязать s + назад; привязать a + moveleft; привязать d + moveright; привязать mouse1 +attack\"')">bind "T" "отменить привязку; привязать w + вперед; привязать s + назад; привязать a + moveleft; привязать d + moveright; привязать mouse1 +attack"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Радар, который показывает всё (больше информации)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать F8 cl_radar_scale 1,7; cl_radar_always_centered 0')>привязать F8 cl_radar_scale 1,7; cl_radar_always_centered 0"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Защита от слепых зон на флешках</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"L\" \"incrementvar mp_teammates_are_enemies 0 1 1\"')">bind "L" "incrementvar mp_teammates_are_enemies 0 1 1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Режим «ГМОД» (лучше видно сквозь стены)</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка \"N\" \"приращение переменной fog_enable 0 1 1\"')">привязка "N" "приращение переменной fog_enable 0 1 1"</div>
- </div>
- 
- <div class="контейнер-привязка">
- <div class="привязка-название">📌 Чистый экран (убирает весь мусор)</div>
- <div class="привязка-код" onclick="copyToClipboard('привязать F9 к "очистить"')>привязать F9 к "очистить"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">⚡ УСКОРЕНИЕ ИГРОВОГО ПРОЦЕССА</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"MOUSE4\" \"incrementvar cl_righthand 0 1 1\"')">bind "MOUSE4" "incrementvar cl_righthand 0 1 1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Автоматическая закупка всего необходимого</div>
- <div class="bind-code" onclick="copyToClipboard('привязать \"KP_INS\" \"купить m4a1; купить ak47; купить deagle; купить hegrenade; купить molotov; купить smokegrenade; купить kevlarhelm\"')">привязать "KP_INS" "купить m4a1; купить ak47; купить deagle; купить hegrenade; купить molotov; купить smokegrenade; купить kevlarhelm"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Автобот в чате (спам сообщений)</div>
- <div class="привязать-код" onclick="copyToClipboard('привязать F10 к "сказать GG EZ"')>привязать F10 к "сказать GG EZ"</div>
- </div>
- 
- <div class="привязать-контейнер>
- <div class="bind-title">📌 Максимально быстрое переключение между ножом и оружием</div>
- <div class="bind-code" onclick="copyToClipboard('bind \"MOUSE3\" \"slot3; slot1\"')">bind "MOUSE3" "slot3; slot1"</div>
- </div>
- 
- <div class="bind-container">
- <div class="bind-title">📌 Быстрый закуп с приоритетом AWP</div>
- <div class="привязка-код" onclick="copyToClipboard('привязка \"KP_HOME\" \"купить автомат; купить дегль; купить кевларовый шлем; купить дымовую гранату\"')">привязка "KP_HOME" "купить автомат; купить дегль; купить кевларовый шлем; купить дымовую гранату; купить дымовую гранату"</div>
- </div>
- 
- <script>
- function copyToClipboard(текст) {
- const textArea = document.createElement("textarea");
- textArea.value = текст;
- document.body.appendChild(textArea);
- textArea.select();
- document.execCommand('copy');
- document.body.removeChild(textArea);
- alert('Команда скопирована в буфер обмена!');
- }
- </script>
- 
- </body>
- </html> 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бинды для игры</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+    .bind-container {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .bind-container:hover {
+      background-color: #444;
+    }
+    .bind-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .bind-code {
+      background-color: #222;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: "Courier New", monospace;
+      display: inline-block;
+      user-select: all;
+    }
+    .copied-message {
+      display: none;
+      color: #00ff00;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Бинды для игры</h1>
+  
+  <div id="binds-container"></div>
 
+  <script>
+    const binds = [
+      { title: "🎯 АИМ / ТРИГГЕР-БОТ", code: "bind \"MOUSE4\" \"+attack; wait 5; -attack\"" },
+      { title: "📌 Автоматическая стрельба при приближении", code: "bind \"MOUSE3\" \"+attack2; wait 5; -attack; wait 5; +attack; wait 5; -attack\"" },
+      { title: "📌 Максимально плавный триггер-бот", code: "bind \"MOUSE5\" \"+attack; wait 1; -attack\"" },
+      { title: "📌 Режим авто-нажатия", code: "bind \"F\" \"+attack; -attack\"" },
+      { title: "📌 100% быстрый таппинг", code: "bind \"F1\" \"+attack; wait; -attack; wait\"" },
+      { title: "🔍 ВХ / Улучшенная видимость", code: "bind \"F2\" \"mat_monitorgamma 3; mat_colorcorrection 1; mat_autoexposure_max 5; r_drawparticles 0\"" },
+      { title: "📌 Радар показывает врагов", code: "bind \"F3\" \"cl_radar_always_centered 0; cl_radar_scale 1.5\"" },
+      { title: "📌 Удаление крови, дыма", code: "bind \"SHIFT\" \"+speed; r_cleardecals\"" },
+      { title: "📌 Подсветка врагов", code: "bind \"F4\" \"incrementvar cl_csm_shadows 0 1 1\"" }
+    ];
+    
+    const container = document.getElementById("binds-container");
+
+    binds.forEach(bind => {
+      const bindDiv = document.createElement("div");
+      bindDiv.classList.add("bind-container");
+      bindDiv.innerHTML = `
+        <div class="bind-title">${bind.title}</div>
+        <div class="bind-code" onclick="copyToClipboard('${bind.code}', this)">${bind.code}</div>
+        <div class="copied-message">Скопировано!</div>
+      `;
+      container.appendChild(bindDiv);
+    });
+    
+    function copyToClipboard(text, element) {
+      navigator.clipboard.writeText(text).then(() => {
+        const message = element.nextElementSibling;
+        message.style.display = "block";
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 1000);
+      });
+    }
+  </script>
+
+</body>
+</html>
